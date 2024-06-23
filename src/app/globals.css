@@ -138,7 +138,13 @@ body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* // footer  */
+.st-copyright-wrap {
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @layer utilities {
 
 }

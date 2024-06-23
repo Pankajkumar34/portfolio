@@ -36,7 +36,7 @@ const AboutMe = () => {
                 <li><span>Experience</span>: <span>+1 year</span></li>
               </ul>
               <div className="st-text-block-btn">
-                <a className="st-btn st-style1 st-color1" href="/images/Resume.pdf" download="">Download CV</a>
+              <a className="st-btn st-style1 st-color1" href="/cv/pankaj_2.0.pdf" download="pankaj_2.0.pdf">Download CV</a>
               </div>
             </div>
           </div>
