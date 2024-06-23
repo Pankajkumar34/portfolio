@@ -7,6 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          sm: "100%",
+          md: "100%",
+          lg: "1140px",
+          xl: "1140px",
+          "2xl": "1280px",
+        },
+      },
+      screens: {
+        'sm': { "max-with": "640px" },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

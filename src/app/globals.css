@@ -7,6 +7,21 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+body, html {
+  position: relative;
+  z-index: -1;
+  color: #a9adb8;
+  background-color: #0a101e;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -15,19 +30,115 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/* // navbar */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.main_header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999999;
+ color: white;
+ height: 100px;
+}
+.active{
+  color: #ff8000;
+}
+.home_heading h3 {
+  font-size: 30px;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #ff8000;
+}
+.menus ul li{
+  text-transform: uppercase;
+}
+.home_heading h1 {
+  
+  margin-bottom: 24px;
+  font-weight: 900;
+  color: #fdfeff;
+  line-height: 1;
+}
+.home_heading h2 {
+  font-size: 36px;
+  margin-bottom: 41px;
+  font-weight: 300;
+  color: #a9adb8;
+}
+.home_heading .st-hero-btn  {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: Roboto,sans-serif;
+  line-height: 1.5em;
+  font-weight: 500;
+  padding: 12px 1.5em;
+  border-radius: 50px;
+  min-width: 170px;
+  border: none;
+  outline: none;
+  transition: all .4s ease;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: #ff8000;
+}
+.cs_cursor_sm {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff8000;
+  position: fixed; /* Ensure it is fixed relative to the viewport */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference; /* Optional: For a more dynamic appearance */
+  z-index: 9999; /* Ensure it is above other elements */
+}
+/* // about */
+.details .st-text-block-title {
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+.details .st-text-block-subtitle {
+  font-size: 24px;
+  font-weight: 300;
+  color: #fec544;
+  margin-bottom: 18px;
+}
+.st-text-block-details li span:first-child {
+  display: inline-block;
+  width: 108px;
+  margin-right: -5px;
+}
+.details .st-text-block-btn {
+  margin-top: 43px;
+}
+.details .st-text-block-btn .st-color1 {
+  background-color: #fec544;
+  color: #070d1b;
+  padding: 15px;
+  border-radius: 10px;
+}
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: #fff6f6 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
 }

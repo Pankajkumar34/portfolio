@@ -1,6 +1,10 @@
+// _app.js or RootLayout.js (depending on your Next.js setup)
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+// import CustomCursor from "@/components/showDot/CustomCursor";
+import Navbar from "@/components/navbar";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -9,9 +13,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      <body className={inter.className}>
+      <Navbar/>
+        {children}
+        {/* Ensure CustomCursor is included only once */}
+       
+        </body>
     </html>
   );
 }
