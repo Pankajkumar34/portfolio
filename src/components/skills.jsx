@@ -2,8 +2,6 @@ import React from 'react'
 import Progressbar from './progressBar/progressbar';
 import ExSvg from '../assets/exp.png';
 import Image from 'next/image';
-// import { ExSvg } from '@/techIcons';
-
 const Skills = () => {
     return (
         <div className='container'>
