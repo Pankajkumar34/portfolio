@@ -23,11 +23,9 @@ const Navbar = () => {
                             <li className='cursor-pointer px-[40px]'><Link href="/Skills">Skills</Link></li>
                             <li className='cursor-pointer px-[40px]'><Link href="/Exprience">Exprience</Link></li>
                         </ul>
-                        <div>
-                            <h2>Phone</h2>
-                        </div>
+                       
                     </div>
-                    <div className='relative  z-[99999] '>
+                    <div className=' sm:block lg:hidden relative  z-[99999] '>
                      
                         <FontAwesomeIcon icon={faBars} className='text-[30px]' />
                     </div>

@@ -10,10 +10,11 @@ import { Trail, Float, Line, Sphere, Stars } from '@react-three/drei'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { useRef } from 'react'
 import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 
 const HomeHeroSec = () => {
- 
+
 
     return (
         <section className='main_home sm:h-[70vh] lg:h-screen flext items-center ' style={{ position: 'relative', zIndex: -1 }}>
@@ -31,14 +32,15 @@ const HomeHeroSec = () => {
                 <div className=' pt-[100px] home_contents sm:block lg:flex xl:flex lg:justify-between lg:items-center relative z-[99999]'>
                     <div className='home_heading  text-white w-[70%] '>
                         <div className="st-height-b80 st-height-lg-b80"></div>
-                        <div className='hero_text'>
+                        <motion.div initial={{x:"-500px"}} whileInView={{x:"0"}} className='hero_text'>
                             <h3 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" className="aos-init aos-animate">Hello, I’m</h3>
-                        </div><h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" className=" aos-init aos-animate sm:text-[60px] lg:text-[120px]">Pankaj <br /> Kumar</h1>
-                        <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" className="aos-init aos-animate sm:!text-[22px]">Mern Stack Developer</h2>
+                        </motion.div><h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="300" className=" aos-init aos-animate  sm:text-[60px] lg:text-[120px]">Pankaj <br /> <p className="animate-typing overflow-hidden whitespace-nowrap border-r-4  pr-5 ">Kumar</p></h1>
+                        <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" className="aos-init aos-animate  sm:!text-[22px]">Mern Stack Developer</h2>
                         <div className="st-hero-btn " data-aos="fade-up" data-aos-duration="800" data-aos-delay="500"><a className="st-btn st-style1 st-color1" href="contact">Hire Me</a></div>
 
                     </div>
-                    <div className='home_image sm:hidden lg:block' style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <motion.div initial={{ x: "100%" }} whileInView={{ x: "0" }} animate={{animationDuration:2}} transition={{type:"spring"}}
+                         className='home_image sm:hidden lg:block' style={{ position: 'relative', width: '100%', height: '100%' }}>
                         <Canvas
                             camera={{ position: [0, 0, 10] }}
                             style={{ width: '600px', height: '600px', margin: "auto" }}
@@ -51,7 +53,7 @@ const HomeHeroSec = () => {
                                 <Bloom luminanceThreshold={1} radius={0.7} />
                             </EffectComposer>
                         </Canvas>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
