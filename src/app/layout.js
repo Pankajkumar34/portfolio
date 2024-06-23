@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Footer } from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
       <Navbar/>
         {children}
         {/* Ensure CustomCursor is included only once */}
-       
+       <Footer/>
         </body>
     </html>
   );
